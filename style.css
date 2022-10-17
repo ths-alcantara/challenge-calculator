@@ -1,0 +1,217 @@
+html[data-theme="dark"] {
+ --background-color: hsl(223, 25%, 31%);
+ --letters-color: hsl(0, 0%, 100%);
+ --toggle-button-color: hsl(6, 63%, 50%);
+ --toggle-background-color: hsl(223, 31%, 20%);
+ --display-background-color: hsl(224, 36%, 15%);
+ --display-number-color: hsl(0, 0%, 100%);
+ --btns-container-background-color:  hsl(224, 29%, 20%);
+ --btns-background-color:  hsl(30, 25%, 89%);
+ --btns-color: hsl(221, 14%, 31%);
+ --btns-shadow-color: hsl(28, 16%, 65%);
+ --btns-hover-color: hsl(0, 0%, 96%);
+ --reset-del-background-color: hsl(224, 20%, 49%);
+ --reset-del-shadow-color: hsl(224, 28%, 35%);
+ --reset-del-hover-color: hsl(223, 22%, 56%);
+ --equal-background-color: hsl(5, 63%, 50%);
+ --equal-shadow-color: hsl(6, 70%, 34%);
+ --equal-hover-color: hsl(5, 55%, 57%);
+ --del-reset-color: hsl(0, 0%, 100%);
+ --equal-color:  hsl(0, 0%, 100%);
+}
+
+html[data-theme="light"] {
+ --background-color: hsl(0, 0%, 90%);
+ --letters-color: hsl(60, 10%, 19%);
+ --toggle-button-color: hsl(25, 98%, 40%);
+ --toggle-background-color: hsl(0, 5%, 81%);
+ --display-background-color: hsl(0, 0%, 93%);
+ --display-number-color:  hsl(60, 10%, 19%);
+ --btns-container-background-color: hsl(0, 5%, 81%);
+ --btns-background-color: hsl(45, 7%, 89%);
+ --btns-color: hsl(0, 0%, 0%);
+ --btns-shadow-color:hsl(35, 11%, 61%);;
+ --btns-hover-color: hsl(0, 0%, 96%);
+ --reset-del-background-color: hsl(185, 42%, 37%);
+ --reset-del-shadow-color: hsl(185, 58%, 25%);
+ --reset-del-hover-color: hsl(186, 39%, 68%);
+ --equal-background-color: hsl(25, 98%, 40%);
+ --equal-shadow-color: hsl(25, 99%, 27%);
+ --equal-hover-color: hsl(25, 78%, 57%);
+ --del-reset-color: hsl(0, 0%, 100%);
+ --equal-color:  hsl(0, 0%, 100%);
+}
+
+html[data-theme="purple"] {
+--background-color: hsl(268, 75%, 9%);
+--letters-color: hsl(52, 100%, 62%);
+--toggle-button-color: hsl(176, 100%, 44%);
+--toggle-background-color: hsl(268, 71%, 12%);
+--display-background-color: hsl(268, 71%, 12%);
+--display-number-color:hsl(52, 100%, 62%);
+--btns-container-background-color: hsl(268, 71%, 12%);
+--btns-background-color:  hsl(268, 47%, 21%);
+--btns-color:hsl(52, 100%, 62%);
+--btns-shadow-color: hsl(290, 70%, 36%);
+--btns-hover-color:hsl(268, 53%, 47%);
+--reset-del-background-color: hsl(281, 89%, 26%);
+--reset-del-shadow-color: hsl(285, 91%, 52%);
+--reset-del-hover-color: hsl(281, 55%, 50%);
+--equal-background-color: hsl(176, 100%, 44%);
+--equal-shadow-color: hsl(177, 92%, 70%);
+--equal-hover-color: hsl(176, 90%, 72%);
+--del-reset-color: hsl(0, 0%, 100%);
+--equal-color: hsl(198, 20%, 13%);
+   }
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+    font-weight: 700;
+}
+
+body {
+    align-items: center;
+    justify-content: center ;
+    background-color: var(--background-color);
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#calculator {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+#top {
+    display: flex;
+    color: var(--letters-color);
+}
+
+#calc {
+    padding-right: 260px;
+    font-size: 23px;
+}
+
+.chooseTheme {
+    width: 50px;
+    padding-left: 10px;
+}
+
+#txt-theme {
+    padding-top: 15px;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+#select {
+    letter-spacing: 4px;
+    font-size: 10px;
+    text-align: center;
+    padding-bottom: 3px;
+}
+
+input {
+    height: 10px;
+    width: 10px;
+    appearance: none;
+    border-radius: 100%;
+    opacity: 0;
+    background-color: var(--toggle-button-color);
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    border-radius: 50px;
+    background-color: var(--toggle-background-color);
+}
+
+.toggle-btn {
+    margin: 2px;
+}
+
+#one {
+    opacity: 1;
+}
+
+#display {
+    background-color: var(--display-background-color);
+    height: 80px;
+    margin: 15px 0px;
+    border-radius: 10px;
+    color: var(--display-number-color) ;
+    font-size: 35px;
+    text-align: right;
+}
+
+#btns-container {
+    height: 300px;
+    padding: 20px;
+    background-color: var(--btns-container-background-color);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+button {
+    border-radius: 10px;
+    font-size: 29px;
+    height: 45px;
+    align-items: center;
+    width: 75px;
+    background-color: var(--btns-background-color);
+    box-shadow: 0px 3px var(--btns-shadow-color);
+    border: 0px;
+    color: var(--btns-color);
+}
+
+button:hover {
+    background-color: var(--btns-hover-color);
+}
+
+
+#equal-btn, #reset-btn {
+    grid-column: span 2;
+    height: 45px;
+    width: auto;
+    border: 0px;
+}
+
+#reset-btn, #del-btn {
+    background-color: var(--reset-del-background-color);
+    box-shadow: 0px 3px  var(--reset-del-shadow-color);
+    font-size: 20px;
+    letter-spacing: 1px ;
+}
+
+#reset-btn:hover, #del-btn:hover {
+    background-color: var(--reset-del-hover-color);
+}
+
+#reset-btn{
+    color: var(--del-reset-color);
+}
+
+#equal-btn {
+    background-color: var(--equal-background-color);
+    box-shadow: 0px 3px  var(--equal-shadow-color);
+    color: var(--equal-color);
+}
+
+#equal-btn:hover {
+    background-color: var(--equal-hover-color);
+}
+
+#del-btn {
+    color: var(--del-reset-color);
+}
+
+
+
+
